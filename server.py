@@ -11,6 +11,7 @@ Run:
 """
 
 import time, re, json
+import os
 from pathlib import Path
 from collections import Counter
 
@@ -25,7 +26,7 @@ from ddgs import DDGS
 # ═══════════════════════════════════════════════════════════════
 # CONFIGURATION
 # ═══════════════════════════════════════════════════════════════
-GROQ_API_KEY   = "Enter_your_groq_api_key_here"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MODEL          = "llama-3.3-70b-versatile"
 DOCS_PER_QUERY = 5
 TOP_DOCS       = 8
