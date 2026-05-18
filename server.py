@@ -393,7 +393,7 @@ async def handle_query(req: QueryRequest):
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
-    html_path = Path(__file__).parent / "ChatbotFrontend.html"
+    html_path = Path(__file__).parent / "index.html"
     if html_path.exists():
         return HTMLResponse(html_path.read_text(encoding="utf-8"))
     return HTMLResponse("<h2>Frontend not found. Place chatbot_frontend.html next to server.py</h2>")
